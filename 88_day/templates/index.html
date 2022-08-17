@@ -62,7 +62,7 @@
 
                           </ul>
                         </div>
-                        {% if today_date > a.date_n: %}
+                        {% if today_date > a.date_n or (today_date == a.date_n and today_time > a.time_n): %}
                             <span style="padding-left:10px;text-decoration:line-through">{{a.todo}}</span><span style="position:absolute;right:20%;">{{a.date}}</span> <span style="position:absolute;right:10%;">{{a.time}}</span><button name="delete" value="{{a.id}}" style="position:absolute;right:5%;padding-top:0px;" class="btn"><i class="fas fa-trash"></i></button>
                         {% elif a.font_color == 'green':%}
                             <span style="padding-left:10px;color:green">{{a.todo}}</span><span style="position:absolute;right:20%;">{{a.date}}</span> <span style="position:absolute;right:10%;">{{a.time}}</span><button name="delete" value="{{a.id}}" style="position:absolute;right:5%;padding-top:0px;" class="btn"><i class="fas fa-trash"></i></button>
